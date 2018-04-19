@@ -13,6 +13,16 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
  
-
+    <dependencies>
+        <dependency>
+            <groupId>es.salesianos.edu</groupId>
+            <artifactId>d</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+  
+	
+	
+	
 	
 </project>
