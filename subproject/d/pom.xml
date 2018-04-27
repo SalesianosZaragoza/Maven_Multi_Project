@@ -12,6 +12,15 @@
 		<artifactId>subproject</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
+	<dependencies>
+       <dependency>
+           <groupId>es.salesianos.edu</groupId>
+           <artifactId>b</artifactId>
+           <version>0.0.1-SNAPSHOT</version>
+       </dependency>
+    </dependencies>
+	
 
     
 	
