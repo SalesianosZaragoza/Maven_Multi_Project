@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 public class Teacher {
-
+	String color = "azul";
 	private static final Teacher INSTANCE = new Teacher();
 
 	// El constructor privado no permite que se genere un constructor por defecto.
@@ -13,9 +13,16 @@ public class Teacher {
 	}
 
 	public static Teacher getInstance() {
-		return INSTANCE;
+				return INSTANCE;
 	}
 
+	/**
+	 * precondition n1 != null and n2 != null postcondition n1+n2
+	 * 
+	 * @param n1 Integer type never should be null
+	 * @param n2 Integer type never should be null
+	 * @return n1 n1 plus n2
+	 */
 	public int sumar(Integer n1, Integer n2) {
 		// progrmacion defensiva
 		// no deberia existir

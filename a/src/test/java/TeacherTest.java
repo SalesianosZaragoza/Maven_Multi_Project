@@ -1,38 +1,36 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.fail;
 
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.fail;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TeacherTest {
 
 	Teacher teacher;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 		System.out.println("al principio de todo");
+		if(System.getProperty("os.name").startsWith("Windows")) {
+		}
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 		System.out.println("al final de todo");
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		System.out.println("antes");
 		teacher = Teacher.getInstance();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 		System.out.println("despues");
 	}
@@ -57,8 +55,8 @@ public class TeacherTest {
 	@Test
 	public void testSumarSeisYsieteMeDevuelveTrece() {
 
-		Integer n1 = 6;
-		Integer n2 = 7;
+		int n1 = 6;
+		int n2 = 7;
 		assertEquals(13, teacher.sumar(n1, n2));
 	}
 
